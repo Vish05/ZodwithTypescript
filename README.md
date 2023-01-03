@@ -34,6 +34,12 @@ npx ts-node index.ts
 
 ## Comparison
 
+Typescript
+
+```js
+npx ts-node index.ts
+```
+
 Yup
 
 https://github.com/jquense/yup
