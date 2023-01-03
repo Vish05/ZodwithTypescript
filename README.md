@@ -34,15 +34,15 @@ npx ts-node index.ts
 
 ## Comparison
 
-Typescript
+### 1. Typescript
 
 `Typescript is not provide runtime type checking so we got error "Cannot read properties of undefined (reading 'forEach')"`
 
-Typescript-withzod
+#### 2. Typescript-withzod
 
 Typescript with Zod provide runtime type checking. It will read json and dispaly output
 
-Typescript-withyup
+#### 3. Typescript-withyup
 
 Typescript with Yup provide runtime type checking. It will read json and dispaly output
 
