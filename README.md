@@ -36,15 +36,19 @@ npx ts-node index.ts
 
 Typescript
 
-```js
-npx ts-node index.ts
-```
+`Typescript is not provide runtime type checking so we got error "Cannot read properties of undefined (reading 'forEach')"`
 
-Yup
+Typescript-withzod
 
-https://github.com/jquense/yup
+Typescript with Zod provide runtime type checking. It will read json and dispaly output
+
+Typescript-withyup
+
+Typescript with Yup provide runtime type checking. It will read json and dispaly output
 
 Yup is a full-featured library that was implemented first in vanilla JS, and later rewritten in TypeScript.
+
+https://github.com/jquense/yup
 
 - Supports casting and transforms
 - All object fields are optional by default
