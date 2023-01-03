@@ -2,6 +2,8 @@
 
 Zod is a TypeScript-first schema declaration and validation library. I'm using the term "schema" to broadly refer to any data type, from a simple string to a complex nested object.
 
+https://github.com/colinhacks/zod
+
 Some other great aspects:
 
 - Zero dependencies
