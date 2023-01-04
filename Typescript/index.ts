@@ -9,7 +9,7 @@ interface Result {
 }
 
 const printJobs = (results: Result) => {
-  results?.results.forEach(({ job }) => {
+  results?.results?.forEach(({ job }) => {
     console.log(job);
   });
 };
