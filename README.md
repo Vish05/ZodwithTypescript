@@ -32,6 +32,13 @@ npm install
 npx ts-node index.ts
 ```
 
+For Error ERR_UNKNOWN_FILE_EXTENSION add below line in package.json
+
+```js
+  "target": "esnext",
+  "module": "commonjs",
+```
+
 ## Comparison
 
 ### 1. Typescript
