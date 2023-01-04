@@ -23,15 +23,5 @@ const printJobs = (results: Result) => {
   }
 };
 
-// printJobs({
-//   results: [
-//     {
-//       id: 1,
-//       name: "John",
-//       job: "developer",
-//     },
-//   ],
-// });
-
 const data: Result = JSON.parse(fs.readFileSync("data.json", "utf-8"));
 printJobs(data);
