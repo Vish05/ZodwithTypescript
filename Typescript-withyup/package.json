@@ -1,23 +1,10 @@
 {
-  "name": "plain",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "target": "esnext",
-  "module": "commonjs",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@types/node": "^16.7.10",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "msw": "^0.49.2",
-    "zod": "^3.8.2"
+    "yup": "^0.32.9"
   }
 }

@@ -1,25 +1,30 @@
+import * as yup from "yup";
+import type { TypeOf } from "yup";
 import fs from "fs";
-import { z } from "zod";
 
-const responseSchema = z.object({
-  results: z.array(
-    z.object({
-      id: z.number(),
-      name: z.string(),
-      job: z.string(),
-    })
-  ),
-});  // Run Time Schema
+const responseSchema = yup
+  .object()
+  .required()
+  .shape({
+    results: yup
+      .array()
+      .required()
+      .of(
+        yup.object().required().shape({
+          name: yup.string().required(),
+          id: yup.number().required(),
+          job: yup.string().required(),
+        })
+      ),
+  }); // Run Time Schema
 
-type Result = z.infer<typeof responseSchema>; // Compile Time Schema
+type Result = TypeOf<typeof responseSchema>; // Compile Time Schema
 
 const printJobs = (results: Result) => {
-  if (responseSchema.safeParse(results).success) {
-    results?.results.forEach(({ job }) => {
-      console.log(job);
-    });
+  if (responseSchema.validateSync(results)) {
+    console.log(results.results?.map(({ job }) => `${job}`).join("\n"));
   } else {
-    console.log("Bad data");
+    console.error("Bad input");
   }
 };
 
@@ -27,11 +32,11 @@ const printJobs = (results: Result) => {
 //   results: [
 //     {
 //       id: 1,
-//       name: "John",
-//       job: "developer",
+//       name: "Jack",
+//       job: "Programmer",
 //     },
 //   ],
 // });
 
-const data: Result = JSON.parse(fs.readFileSync("data.json", "utf-8"));
+const data: Result = JSON.parse(fs.readFileSync("./data.json").toString());
 printJobs(data);
