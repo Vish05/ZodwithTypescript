@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "fname": "Leanne", 
+      "lname": "Graham",
+      "dob": "1990-02-11",
+      "email": "Sincere@april.biz",
+      "address": {
+        "doorNo": 21,
+        "street1": "Kulas Light",
+        "street2": "Kulas Light",
+        "landmark": "Apt. 556",
+        "zipcode": "92998-3874"
+      },
+      "employer": {
+        "company" : "Apple",
+        "startDate": "2013-01-04",
+        "endDate": "2020-03-06",
+        "designation": "Techinical Architecture",
+        "skills": "FE"
+      },
+      "role": "Arch1",
+      "githubProfile": "https://github.com/leanne/"
+    }
+  ]
+}
